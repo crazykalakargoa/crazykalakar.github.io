@@ -53,6 +53,11 @@
     }
   });
 
+  // for youtube hero video
+  $(document).ready(function () {
+  $("img").addClass("animated lightSpeedIn");
+});
+
   // Activate smooth scroll on page load with hash links in the url
   $(document).ready(function() {
     if (window.location.hash) {
