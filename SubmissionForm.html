@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Crazy'Star'Kalakar- Video Submission Form</title>
+
+    <link rel="stylesheet" href="assets\css\form.css" >
+  </head>
+  <body>
+
+    <section class="w3l-forms-main-61">
+  		<div class="form-inner">
+  			<div class="wrapper">
+  				<div class="d-grid top-form">
+  					<div class="logo">
+  						<a class="brand-logo" href="#"><span>CRAZY 'STAR' KALAKAR</a>
+  					</div>
+  				</div>
+  				<div class="form-bg-blur">
+  					<div class="form-61 form-register">
+  						<h4 class="form-head">Video Submission</h4>
+
+  						<form id="uploadForm" action="https://script.google.com/macros/s/AKfycbwwKQXze75Gx8lQChhWm0OLa1We9Af9XQE8yjmuA610cVRDtxZK/exec" method="POST">
+
+                <input type="hidden" value="" name="fileContent" id="fileContent">
+                <input type="hidden" value="" name="filename" id="filename">
+
+  							<div class="">
+  								<p class="text-head">Registration Number</p>
+  								<input required type="number" value="" name="RegistrationNumber" id="RegistrationNumber" placeholder="72XXXXX" class="input" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" min=7200000 max="7200500" maxlength="7"/>
+  							</div>
+  							<div class="">
+  								<p class="text-head">WhatsApp Number</p>
+  								<input required type="tel" value="" name="WhatsappNumber" id="WhatsappNumber" placeholder="XXXXXXXXXX" minlength="10" maxlength="10" class="input"/>
+  							</div>
+  							<div class="">
+  								<p class="text-head">Email</p>
+  								<input type="email" value="" name="email" id="email" class="input"/>
+  							</div>
+  							<label class="remember">
+  								<input type="checkbox">
+  								<span class="checkmark"></span>I have read all the <a href="#">rules & guidelines</a>
+  							</label>
+                <div class="">
+  								<p class="text-head">Upload your Video</p>
+  								<input required id="attach" name="attach" type="file" class="input" accept="video/mp4,video/x-m4v,video/*"/>
+  							</div>
+                <div class="">
+  								<p class="text-head">E-Code</p>
+  								<input type="text" value="" name="Ecode" id="Ecode" class="input" minlength="6" maxlength="6"/>
+  							</div>
+
+  							<button type="submit" class="signinbutton btn" onclick="UploadFile();"> Submit</button>
+  						</form>
+  					</div>
+  				</div>
+
+  			</div>
+  			<div class="copyright text-center">
+  				<div class="wrapper">
+  					<p class="copy-footer-29">© 2020 Crazy Kalakar. All rights reserved | Designed by <a
+  							href="https://w3layouts.com">W3layouts</a> | Photo by <a href="https://www.pexels.com/photo/people-at-theater-713149/">Monica Silvestre</a> from Pexels</p>
+  				</div>
+  			</div>
+  		</div>
+	  </section>
+
+	  <!-- <input value="Submit" type="button" onclick="UploadFile();" /> -->
+
+	   <script>
+
+     function UploadFile() {
+       var reader = new FileReader();
+       var file = document.getElementById('attach').files[0];
+       reader.onload = function(){
+         console.log("abcd", document.getElementById('RegistrationNumber').value);
+         document.getElementById('fileContent').value=reader.result;
+       	document.getElementById('filename').value=document.getElementById('RegistrationNumber').value;
+         document.getElementById('uploadForm').submit();
+       }
+       reader.readAsDataURL(file);
+     }
+
+		// function UploadFile() {
+		//   var reader = new FileReader();
+		//   var file = document.getElementById('attach').files[0];
+		//   reader.onload = function(){
+		// 	if (formValidation()){
+		// 	  document.getElementById('fileContent').value = reader.result;
+		// 	console.log("in on submit", document.getElementById('ip').value);
+		// 	  document.getElementById('filename').value = document.getElementById('RegistrationNumber').value; //file.name;
+		// 	document.getElementById('uploadForm').submit();
+		// 	}else{
+		// 	  alert("please add valid input");
+		// 	}
+    //
+		// 	//alert(document.getElementById('id').value);
+		//   }
+		//   reader.readAsDataURL(file);
+		// }
+
+		// function submitForm() {
+		//   var reader = new FileReader();
+		//   var file = document.getElementById('attach').files[0];
+		//   reader.onload = function(){
+		// 	console.log("in on submit");
+		// 	if (formValidation()){
+		// 	  document.getElementById('uploadForm').submit();
+		// 	}else{
+		// 	  alert("please add valid input");
+		// 	}
+    //
+		// 	//document.getElementById('uploadForm').submit();
+		// 	alert(document.getElementById('ip').value);
+		//   }
+		//   reader.readAsDataURL(file);
+		// }
+
+		// function formValidation() {
+		//   var regNo = document.getElementById('RegistrationNumber').value;
+			// if (regNo < 7200000 || regNo > 7200500){
+			//   document.getElementById('RegistrationNumber').style.borderColor = "red";
+			//   document.getElementById('RegistrationNumber').style.borderRadius = "5px"
+			//   //return false;
+			// }
+			// var phoneNumber = document.getElementById('WhatsappNumber').value;
+			// if (phoneNumber == "" || phoneNumber.size != 10){
+			//   document.getElementById('WhatsappNumber').style.borderColor = "red";
+			//   document.getElementById('WhatsappNumber').style.borderRadius = "5px"
+			//   //return false;
+			// }
+		// 	return (regNo != "" && regNo < 7200000 && regNo > 7200500) && (phoneNumber == "" && phoneNumber.size != 10)
+		// }
+		</script>
+
+  </body>
+</html>
