@@ -13,8 +13,35 @@ html {
     font-family: 'Mukta', sans-serif;
 }
 
-.instr {
-  line-height: 0;
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #f8f8ff;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #f8f8ff;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #f8f8ff;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #f8f8ff;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color:    #f8f8ff;
+}
+
+::placeholder { /* Most modern browsers support this now. */
+   color:    #f8f8ff;
+}
+
+
+
+.new-button {
+    padding: 10px 10px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
 }
 
 * {
@@ -177,7 +204,7 @@ button:hover {
 }
 
 .w3l-forms-main-61 p.copy-footer-29 a:hover {
-    color: #fc636b;
+    color: #fdee21;
 }
 
 .w3l-forms-main-61 .logo {
@@ -185,7 +212,7 @@ button:hover {
 }
 
 .w3l-forms-main-61 a.brand-logo {
-    color: #fc636b;
+    color: #FFC905;
     font-weight: 600;
     font-size: 40px;
     line-height: 45px;
@@ -211,7 +238,7 @@ button:hover {
 }
 
 .w3l-forms-main-61 label.remember a:hover {
-    color: #fc636b;
+    color: #FFC905;
 }
 
 .w3l-forms-main-61 .copyright {
@@ -334,8 +361,8 @@ button:hover {
 }
 
 .w3l-forms-main-61 .signinbutton {
-    background: #fc636b;
-    color: #ffffff;
+    background: #fdee21;
+    color: #900c3f;
     font-size: 17px;
     line-height: 25px;
     text-transform: capitalize;
@@ -358,7 +385,7 @@ button:hover {
     -moz-transition: .3s;
     -ms-transition: .3s;
     -o-transition: .3s;
-    background: #ff464f;
+    background: #FFC905;
 }
 
 .w3l-forms-main-61 .signup {
@@ -433,8 +460,8 @@ button:hover {
 }
 
 .w3l-forms-main-61 .remember input:checked~.checkmark {
-    background: #fc636b;
-    border: 2px solid #fc636b;
+    background: #FFC905;
+    border: 2px solid #FFC905;
 }
 
 .w3l-forms-main-61 .checkmark:after {
