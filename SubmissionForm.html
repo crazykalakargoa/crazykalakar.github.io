@@ -6,6 +6,9 @@
     <title>Crazy'Star'Kalakar- Video Submission Form</title>
 
     <link rel="stylesheet" href="assets\css\form.css" >
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mukta&family=Montserrat&family=Ubuntu&family=Josefin+Sans&family=Jost">
+
   </head>
   <body>
 
@@ -27,11 +30,11 @@
                 <input type="hidden" value="" name="filename" id="filename">
 
   							<div class="">
-  								<p class="text-head">Registration Number</p>
+  								<p class="text-head">Registration Number *</p>
   								<input required type="number" value="" name="RegistrationNumber" id="RegistrationNumber" placeholder="72XXXXX" class="input" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" min=7200000 max="7200500" maxlength="7"/>
   							</div>
   							<div class="">
-  								<p class="text-head">WhatsApp Number</p>
+  								<p class="text-head">WhatsApp Number *</p>
   								<input required type="tel" value="" name="WhatsappNumber" id="WhatsappNumber" placeholder="XXXXXXXXXX" minlength="10" maxlength="10" class="input"/>
   							</div>
   							<div class="">
@@ -40,16 +43,16 @@
   							</div>
   							<label class="remember">
   								<input type="checkbox">
-  								<span class="checkmark"></span>I have read all the <a href="#">rules & guidelines</a>
+  								<span class="checkmark"></span>I have read all the <a href="assets\Rules & Guidelines_Contest.pdf">rules & guidelines</a>
   							</label>
                 <div class="">
-  								<p class="text-head">Upload your Video</p>
-  								<input required id="attach" name="attach" type="file" class="input" accept="video/mp4,video/x-m4v,video/*"/>
+  								<p class="text-head">Upload your Video *</p>
+                  <input required id="attach" name="attach" type="file" class="new-button input" accept="video/mp4,video/x-m4v,video/*"/>
   							</div>
-                <div class="">
+                <!-- <div class="">
   								<p class="text-head">E-Code</p>
   								<input type="text" value="" name="Ecode" id="Ecode" class="input" minlength="6" maxlength="6"/>
-  							</div>
+  							</div> -->
 
   							<button type="submit" class="signinbutton btn" onclick="UploadFile();"> Submit</button>
   						</form>
@@ -76,7 +79,7 @@
        reader.onload = function(){
          console.log("abcd", document.getElementById('RegistrationNumber').value);
          document.getElementById('fileContent').value=reader.result;
-       	document.getElementById('filename').value=document.getElementById('RegistrationNumber').value;
+       	 document.getElementById('filename').value=document.getElementById('RegistrationNumber').value;
          document.getElementById('uploadForm').submit();
        }
        reader.readAsDataURL(file);
