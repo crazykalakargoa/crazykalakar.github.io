@@ -13,6 +13,13 @@
   color: #777;
 } */
 
+pre {
+  text-align: center, !important;
+  font-family: "Open Sans", sans-serif, !important;
+  font-size: 1rem, !important;
+  color: #0071bd, !important;
+}
+
 a {
   color: #43aea0;
 }
